@@ -1,302 +1,243 @@
-import React from "react";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  ExternalLink,
-  Download,
-  Code2,
-  Database,
-  Server,
-} from "lucide-react";
-
-export default function Portfolio() {
-  const skills = [
-    "Python",
-    "Java",
-    "C++",
-    "Django",
-    "React",
-    "MySQL",
-    "SQLite",
-    "Git",
-    "Linux",
-    "REST APIs",
-    "OOP",
-    "Data Structures",
-  ];
-
-  const projects = [
-    {
-      title: "Smart Canteen Management System",
-      desc: "A backend-driven food ordering and balance management platform designed to automate workflows and improve operational efficiency.",
-      tech: ["Python", "Django", "SQLite"],
-    },
-    {
-      title: "Food Waste Reduction System",
-      desc: "An intelligent inventory and waste tracking system focused on analytics, optimization, and efficient food management.",
-      tech: ["PHP", "JavaScript", "MySQL"],
-    },
-    {
-      title: "Student Management System",
-      desc: "Desktop-based CRUD application integrated with JDBC connectivity and secure database management features.",
-      tech: ["Java", "SQL", "JDBC"],
-    },
-  ];
-
+export default function ShwetaPortfolio() {
   return (
-    <div className="bg-[#0f172a] text-white min-h-screen font-sans">
-      {/* NAVBAR */}
-      <nav className="w-full border-b border-gray-800 backdrop-blur-lg sticky top-0 z-50 bg-[#0f172a]/90">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold tracking-wide text-violet-400">
-            Shweta.dev
-          </h1>
-
-          <div className="hidden md:flex gap-8 text-sm font-medium text-gray-300">
-            <a href="#about" className="hover:text-violet-400 transition">
-              About
-            </a>
-            <a href="#skills" className="hover:text-violet-400 transition">
-              Skills
-            </a>
-            <a href="#projects" className="hover:text-violet-400 transition">
-              Projects
-            </a>
-            <a href="#contact" className="hover:text-violet-400 transition">
-              Contact
-            </a>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white font-sans">
+      {/* Navbar */}
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-black/40 border-b border-white/10">
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+          <h1 className="text-2xl font-bold tracking-wide">Shweta Shrivastava</h1>
+          <nav className="hidden md:flex gap-6 text-sm text-slate-300">
+            <a href="#about" className="hover:text-white transition">About</a>
+            <a href="#skills" className="hover:text-white transition">Skills</a>
+            <a href="#projects" className="hover:text-white transition">Projects</a>
+            <a href="#education" className="hover:text-white transition">Education</a>
+            <a href="#contact" className="hover:text-white transition">Contact</a>
+          </nav>
         </div>
-      </nav>
+      </header>
 
-      {/* HERO SECTION */}
-      <section className="max-w-7xl mx-auto px-6 py-24 flex flex-col lg:flex-row items-center justify-between gap-16">
-        <div className="flex-1">
-          <p className="text-violet-400 font-medium mb-4">
-            Backend Developer • MCA Student
+      {/* Hero Section */}
+      <section className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p className="text-cyan-400 uppercase tracking-[0.3em] text-sm mb-4">
+            MCA Student & Aspiring Developer
           </p>
-
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
-            Hi, I'm <span className="text-violet-400">Shweta</span>
-          </h1>
-
-          <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mb-8">
-            Passionate backend developer focused on building scalable APIs,
-            database-driven systems, and high-performance web applications using
-            Python, Java, and modern development technologies.
+          <h2 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+            Building smart and scalable digital solutions.
+          </h2>
+          <p className="text-slate-300 text-lg leading-relaxed mb-8">
+            Pursuing MCA with strong foundations in Java, Python, SQL, and data analysis.
+            Passionate about backend development, software engineering, and solving
+            real-world problems through technology.
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="bg-violet-500 hover:bg-violet-600 transition px-6 py-3 rounded-xl font-semibold flex items-center gap-2">
-              <Download size={18} />
-              Download Resume
-            </button>
-
-            <button className="border border-gray-700 hover:border-violet-500 hover:text-violet-400 transition px-6 py-3 rounded-xl font-semibold">
+            <a
+              href="#projects"
+              className="px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition text-black font-semibold"
+            >
               View Projects
-            </button>
-          </div>
-
-          <div className="flex gap-5 mt-10">
-            <a
-              href="https://github.com/"
-              target="_blank"
-              className="bg-[#1e293b] p-4 rounded-xl hover:bg-violet-500 transition"
-            >
-              <Github />
             </a>
 
             <a
-              href="https://linkedin.com/"
-              target="_blank"
-              className="bg-[#1e293b] p-4 rounded-xl hover:bg-violet-500 transition"
+              href="mailto:shrivastavashweta2704@gmail.com"
+              className="px-6 py-3 rounded-2xl border border-white/20 hover:bg-white/10 transition"
             >
-              <Linkedin />
-            </a>
-
-            <a
-              href="mailto:yourmail@gmail.com"
-              className="bg-[#1e293b] p-4 rounded-xl hover:bg-violet-500 transition"
-            >
-              <Mail />
+              Contact Me
             </a>
           </div>
         </div>
 
-        {/* RIGHT SIDE CARD */}
-        <div className="flex-1 flex justify-center">
-          <div className="bg-gradient-to-br from-violet-500 to-indigo-600 p-[1px] rounded-3xl shadow-2xl">
-            <div className="bg-[#111827] rounded-3xl p-10 w-[360px]">
-              <div className="flex justify-center mb-6">
-                <div className="w-32 h-32 rounded-full bg-violet-500 flex items-center justify-center text-5xl font-bold">
-                  S
-                </div>
-              </div>
-
-              <h2 className="text-2xl font-bold text-center mb-2">
-                Shweta Shrivastava
-              </h2>
-
-              <p className="text-gray-400 text-center mb-8">
-                Backend Developer
-              </p>
-
-              <div className="space-y-5">
-                <div className="flex items-center gap-4">
-                  <Server className="text-violet-400" />
-                  <span className="text-gray-300">
-                    Backend Architecture
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <Database className="text-violet-400" />
-                  <span className="text-gray-300">Database Systems</span>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <Code2 className="text-violet-400" />
-                  <span className="text-gray-300">API Development</span>
-                </div>
+        <div className="flex justify-center">
+          <div className="w-80 h-80 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-700 p-1 shadow-2xl shadow-cyan-500/30">
+            <div className="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-center px-8">
+              <div>
+                <h3 className="text-3xl font-bold mb-2">Shweta</h3>
+                <p className="text-slate-400">Java • Python • SQL</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section
-        id="about"
-        className="max-w-7xl mx-auto px-6 py-20 border-t border-gray-800"
-      >
-        <h2 className="text-4xl font-bold mb-10">
-          About <span className="text-violet-400">Me</span>
-        </h2>
+      {/* About */}
+      <section id="about" className="max-w-6xl mx-auto px-6 py-20">
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-4xl font-bold mb-6">About Me</h3>
+            <p className="text-slate-300 leading-relaxed text-lg">
+              I am an MCA student with a strong academic background in computer science.
+              I enjoy developing software solutions, learning new technologies, and
+              improving my analytical and problem-solving abilities.
+            </p>
+          </div>
 
-        <p className="text-gray-400 leading-relaxed text-lg max-w-4xl">
-          I am currently pursuing a Master of Computer Applications (MCA) and
-          specialize in backend development, database design, and scalable
-          system architecture. I enjoy solving real-world problems through clean
-          and optimized code while continuously improving my development and
-          analytical skills.
-        </p>
-      </section>
-
-      {/* SKILLS */}
-      <section
-        id="skills"
-        className="max-w-7xl mx-auto px-6 py-20 border-t border-gray-800"
-      >
-        <h2 className="text-4xl font-bold mb-12">
-          Technical <span className="text-violet-400">Skills</span>
-        </h2>
-
-        <div className="flex flex-wrap gap-4">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-[#1e293b] hover:bg-violet-500 transition px-5 py-3 rounded-xl text-sm font-medium"
-            >
-              {skill}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+              <h4 className="text-cyan-400 text-3xl font-bold">8.36</h4>
+              <p className="text-slate-300 mt-2">B.Sc CS CGPA</p>
             </div>
-          ))}
+
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+              <h4 className="text-cyan-400 text-3xl font-bold">2+</h4>
+              <p className="text-slate-300 mt-2">Academic Projects</p>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+              <h4 className="text-cyan-400 text-3xl font-bold">4+</h4>
+              <p className="text-slate-300 mt-2">Programming Languages</p>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+              <h4 className="text-cyan-400 text-3xl font-bold">MCA</h4>
+              <p className="text-slate-300 mt-2">Currently Pursuing</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* PROJECTS */}
-      <section
-        id="projects"
-        className="max-w-7xl mx-auto px-6 py-20 border-t border-gray-800"
-      >
-        <h2 className="text-4xl font-bold mb-12">
-          Featured <span className="text-violet-400">Projects</span>
-        </h2>
+      {/* Skills */}
+      <section id="skills" className="bg-white/5 border-y border-white/10 py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-4xl font-bold mb-12 text-center">Technical Skills</h3>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-[#111827] border border-gray-800 rounded-3xl p-8 hover:border-violet-500 transition duration-300"
-            >
-              <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                {project.desc}
-              </p>
-
-              <div className="flex flex-wrap gap-3 mb-6">
-                {project.tech.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="bg-[#1e293b] text-violet-400 px-3 py-1 rounded-lg text-sm"
-                  >
-                    {tech}
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-black/30 rounded-2xl p-6 border border-white/10">
+              <h4 className="text-2xl font-semibold mb-4 text-cyan-400">Programming</h4>
+              <div className="flex flex-wrap gap-3">
+                {['C', 'C++', 'Java', 'Python'].map((skill) => (
+                  <span key={skill} className="px-4 py-2 rounded-full bg-white/10 text-sm">
+                    {skill}
                   </span>
                 ))}
               </div>
-
-              <button className="flex items-center gap-2 text-violet-400 hover:gap-3 transition-all">
-                View Project <ExternalLink size={18} />
-              </button>
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* EDUCATION */}
-      <section className="max-w-7xl mx-auto px-6 py-20 border-t border-gray-800">
-        <h2 className="text-4xl font-bold mb-12">
-          Education & <span className="text-violet-400">Certifications</span>
-        </h2>
+            <div className="bg-black/30 rounded-2xl p-6 border border-white/10">
+              <h4 className="text-2xl font-semibold mb-4 text-cyan-400">Database & Backend</h4>
+              <div className="flex flex-wrap gap-3">
+                {['SQL', 'DBMS', 'CRUD', 'Database Design'].map((skill) => (
+                  <span key={skill} className="px-4 py-2 rounded-full bg-white/10 text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
 
-        <div className="space-y-8">
-          <div className="bg-[#111827] p-8 rounded-3xl border border-gray-800">
-            <h3 className="text-2xl font-bold">
-              Master of Computer Applications (MCA)
-            </h3>
-            <p className="text-violet-400 mt-2">
-              Shri Ramdeobaba College of Engineering & Management
-            </p>
-          </div>
-
-          <div className="bg-[#111827] p-8 rounded-3xl border border-gray-800">
-            <h3 className="text-2xl font-bold">
-              Google Professional Certificate
-            </h3>
-
-            <p className="text-gray-400 mt-2">
-              Linux, SQL, IT Infrastructure & Database Management
-            </p>
+            <div className="bg-black/30 rounded-2xl p-6 border border-white/10">
+              <h4 className="text-2xl font-semibold mb-4 text-cyan-400">Tools & Concepts</h4>
+              <div className="flex flex-wrap gap-3">
+                {['OOP', 'Data Structures', 'MS Excel', 'Linux', 'HTML', 'CSS'].map((skill) => (
+                  <span key={skill} className="px-4 py-2 rounded-full bg-white/10 text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section
-        id="contact"
-        className="max-w-7xl mx-auto px-6 py-20 border-t border-gray-800"
-      >
-        <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-3xl p-12 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Let's Build Something Great
-          </h2>
+      {/* Projects */}
+      <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
+        <h3 className="text-4xl font-bold mb-12 text-center">Projects</h3>
 
-          <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
-            Open to internships, collaborations, and backend development
-            opportunities.
-          </p>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition duration-300">
+            <h4 className="text-2xl font-bold mb-4">Student Management System</h4>
+            <p className="text-slate-300 mb-6 leading-relaxed">
+              Developed a student record management system using Java and SQL with CRUD functionality.
+              Implemented Object Oriented Programming concepts for clean and modular development.
+            </p>
 
-          <button className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition">
-            Contact Me
-          </button>
+            <div className="flex flex-wrap gap-3">
+              {['Java', 'SQL', 'OOP'].map((tech) => (
+                <span key={tech} className="px-4 py-2 bg-cyan-500/10 text-cyan-300 rounded-full text-sm">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition duration-300">
+            <h4 className="text-2xl font-bold mb-4">Data Analysis Mini Project</h4>
+            <p className="text-slate-300 mb-6 leading-relaxed">
+              Analyzed datasets using SQL queries and MS Excel. Performed data cleaning,
+              data interpretation, and generated analytical insights through reports.
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              {['SQL', 'Excel', 'Data Analysis'].map((tech) => (
+                <span key={tech} className="px-4 py-2 bg-cyan-500/10 text-cyan-300 rounded-full text-sm">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-gray-800 py-8 text-center text-gray-500">
-        © 2026 Shweta Shrivastava • Built with React & Tailwind CSS
-      </footer>
+      {/* Education */}
+      <section id="education" className="bg-white/5 border-y border-white/10 py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-4xl font-bold mb-12 text-center">Education</h3>
+
+          <div className="space-y-6">
+            <div className="bg-black/30 border border-white/10 rounded-2xl p-6">
+              <h4 className="text-2xl font-semibold">Master of Computer Applications (MCA)</h4>
+              <p className="text-cyan-400 mt-2">Shri Ramdeobaba College of Engineering and Management</p>
+              <p className="text-slate-400 mt-1">Currently Pursuing</p>
+            </div>
+
+            <div className="bg-black/30 border border-white/10 rounded-2xl p-6">
+              <h4 className="text-2xl font-semibold">Bachelor of Science (Computer Science)</h4>
+              <p className="text-slate-300 mt-2">CGPA: 8.36 / 10</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-black/30 border border-white/10 rounded-2xl p-6">
+                <h4 className="text-xl font-semibold">12th Standard</h4>
+                <p className="text-slate-300 mt-2">81.83%</p>
+              </div>
+
+              <div className="bg-black/30 border border-white/10 rounded-2xl p-6">
+                <h4 className="text-xl font-semibold">10th Standard</h4>
+                <p className="text-slate-300 mt-2">93%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="max-w-4xl mx-auto px-6 py-24 text-center">
+        <h3 className="text-5xl font-bold mb-6">Let’s Connect</h3>
+        <p className="text-slate-300 text-lg mb-10">
+          Open to internship and entry-level opportunities in software development,
+          backend development, and data analytics.
+        </p>
+
+        <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+          <a
+            href="mailto:shrivastavashweta2704@gmail.com"
+            className="px-6 py-4 rounded-2xl bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition"
+          >
+            shrivastavashweta2704@gmail.com
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/shweta-shrivastava-14a6bb266"
+            target="_blank"
+            rel="noreferrer"
+            className="px-6 py-4 rounded-2xl border border-white/20 hover:bg-white/10 transition"
+          >
+            LinkedIn Profile
+          </a>
+        </div>
+
+        <p className="text-slate-500 mt-12">
+          © 2026 Shweta Shrivastava. All rights reserved.
+        </p>
+      </section>
     </div>
   );
 }
